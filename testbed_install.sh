@@ -14,7 +14,7 @@ sudo update-initramfs -c -k 3.2.1-vipzone+
 echo '>>>>> Installing glibc-2.15-vipzone...'
 sudo rm -rf /vipzone-tools
 sudo mkdir /vipzone-tools
-sudo cp glibc-2.15-vipzone/* /vipzone-tools/
+sudo cp -R glibc-2.15-vipzone/* /vipzone-tools/
 
 echo '>>>>> Installing vanilla kernel...' 
 sudo cp bzImage-vanilla /boot/vmlinuz-3.2.1-vanilla 
@@ -32,7 +32,7 @@ sudo update-initramfs -c -k 3.2.1-vanilla
 echo '>>>>> Installing glibc-2.15-vanilla...'
 sudo rm -rf /vanilla-tools
 sudo mkdir /vanilla-tools
-sudo cp glibc-2.15-vanilla/* /vanilla-tools/
+sudo cp -R glibc-2.15-vanilla/* /vanilla-tools/
 
 echo '>>>>> Installing memtest-MWG...'
 sudo cp memtest-vipzone.bin /boot/memtest86+.bin
